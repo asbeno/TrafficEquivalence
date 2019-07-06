@@ -1,0 +1,3 @@
+(assert ( forall ( (r1 Int) ( r2 Int) ) ( => ( and (= r1 0) (and (>= r2 20) (<= r2 80 )) )
+        ( exists ( (r3 Int ) (r4 Int) ) ( and  (  and  ( and (>= r3 0) (<= r3 2 ) ) (and  (>= r4 66) ( <= r4 68 )) ) ( and (= r1 r3) ( = r2 r4) ) )))))
+(check-sat)

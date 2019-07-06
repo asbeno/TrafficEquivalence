@@ -1,0 +1,11 @@
+(declare-const epsilon Int)
+(declare-const epsilon2 Int)
+(assert (>= epsilon 0))
+(assert (>= epsilon2 0))
+
+(assert ( forall ( (r1 Int) ( r2 Int) ) ( => ( and (and (>= r1 2) (<= r1 4 )) (and (>= r2 6) (<= r2 8 )) )
+        ( exists ( (r3 Int ) (r4 Int) ) ( and  (  and  (and  (>= r3 0) ( <= r3 2 )) (and  (>= r4 66) ( <= r4 68 )) ) ( and (= r1 (+ r3 epsilon )) ( = (+ r2 epsilon2) r4) ) )))))
+(check-sat)
+(get-model)
+; Em uma versão alterada do Nest Security Camera, em que o seu pico chega a no máximo 8 KB/s, é possível tornar ele e o Belkin Switch observacionalmente equivalentes
+; adicionando-se uma taxa fixa de pacotes sobre o Switch durante sua fase Idle, e sobre a câmera durante um evento de movimento.
